@@ -1,0 +1,7 @@
+
+@import url(./variables.css);
+
+.name{
+    font-family:"K2D";
+    color: var(--text-clear-color)
+}
