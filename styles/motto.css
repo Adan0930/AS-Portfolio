@@ -1,0 +1,11 @@
+@import url(../styles/variables.css);
+.bi{
+    font-size: 20px;
+}
+.motto{
+    font-family: 'K2D';
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color:var(--text-orange-color);
+}
