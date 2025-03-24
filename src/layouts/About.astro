@@ -1,12 +1,17 @@
 ---
-import Profile from "../components/Profile.astro";
-import Name from "../components/Name.astro";
+import NameProfile from "./NameProfile.astro";
 import Motto from "../components/Motto.astro";
+import Photo from "../components/Photo.astro";
+import BtnCV from "../components/BtnCV.astro";
 ---
 
-<div class="container text-center">
-    <Name></Name>
-    <Profile></Profile>
-    <Motto></Motto>
-
+<div class="container-fluid text-center">
+    <div class="row">
+        <NameProfile></NameProfile>
+        <Photo></Photo>
+    </div>
+    <div class="row">
+        <Motto></Motto>
+        <BtnCV></BtnCV>
+    </div>
 </div>

@@ -1,6 +1,9 @@
 
 @import url(./variables.css);
-
+.div-name{
+    width: 800px;
+    margin-left: 50px
+}
 .name{
     font-family:"K2D";
     color: var(--text-clear-color);
