@@ -1,0 +1,66 @@
+@import url(../styles/variables.css);
+
+.container input{
+background: rgba(255, 255, 255, 0.2); /* Fondo transparente con opacidad */
+  /* backdrop-filter: blur(10px);  */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-clear-color); /* Color del texto */
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease; /* Transición suave */
+  border-radius: 50px;
+}
+
+.container input::placeholder{
+    color:var(--text-clear-color);
+}
+.container input:focus {
+    background: rgba(255, 255, 255, 0.3); /* Fondo ligeramente más opaco cuando se enfoca */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+  
+.container input:focus::placeholder {
+    color: var(--text-clear-color); /* Mantener el color blanco del placeholder cuando se hace foco */
+  }
+  .container .bi {
+    font-size: 1.2rem;
+    color: var(--text-clear-color); /* Color del icono */
+  }
+
+.container textarea{
+    background: rgba(255, 255, 255, 0.2); /* Fondo transparente con opacidad */
+  /* backdrop-filter: blur(10px);  */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-clear-color); /* Color del texto */
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease; /* Transición suave */
+  border-radius: 30px;
+}
+.container textarea::placeholder{
+    color: var(--text-clear-color);
+}
+
+.container textarea:focus {
+    background: rgba(255, 255, 255, 0.3); /* Fondo ligeramente más opaco cuando se enfoca */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+  
+.container textarea:focus::placeholder {
+    color: var(--text-clear-color); /* Mantener el color blanco del placeholder cuando se hace foco */
+}
+
+.container button{
+    border-radius: 30px;
+}
+.container button:hover {
+    border-color: var(--text-clear-color); /* Borde naranja al pasar el cursor */
+    color: orange; /* Texto y icono naranja al pasar el cursor */
+  }
+  
+.container button:hover i {
+    color: orange; /* El icono también cambia de color a naranja */
+  }
+
