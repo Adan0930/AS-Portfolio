@@ -1,0 +1,11 @@
+@import url('/styles/variables.css');
+
+.social{
+    width: 800px;
+}
+a{
+    color: var(--text-clear-color);
+    text-decoration: none;
+    font-size: 30px;
+    
+}
