@@ -1,11 +1,44 @@
 @import url('/styles/variables.css');
 
-.social{
-    width: 800px;
+.social-list {
+    font-family: 'K2D';
+    font-weight: 200;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Pegado a la izquierda */
+    transform: translateY(-50%);
 }
-a{
-    color: var(--text-clear-color);
-    text-decoration: none;
-    font-size: 30px;
-    
+
+.social-list .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    background: transparent !important;
+    border: none;
+    padding: 5px 0;
 }
+
+.social-list .bi {
+    font-size: 24px;
+    color: white !important;
+}
+
+.social-list a {
+    font-size: 25px;
+    color: white !important;
+    text-decoration: none; /* Elimina la línea */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-list a:hover {
+     color: var(--text-orange-color)!important; 
+}
+.social-list a:hover .bi {
+    color: var(--text-orange-color) !important; /* Cambia el icono a naranja */
+}
+
+
