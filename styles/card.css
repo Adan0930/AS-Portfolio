@@ -1,0 +1,24 @@
+@import url('../styles/variables.css');
+.card{
+    background: none;
+    border-radius: 15px;
+    border: solid 2px var(--text-orange-color);
+}
+.logo-card{
+    width:100px;
+}
+.card-title{
+    color:var(--text-clear-color);
+}
+.card-text{
+    color: var(--text-clear-color);
+}
+
+.btn{
+    background: var(--text-orange-color);
+    color: var(--text-clear-color);
+}
+
+.btn:hover{
+    color: var(--text-orange-color);
+}

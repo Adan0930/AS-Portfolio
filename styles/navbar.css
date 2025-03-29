@@ -1,36 +1,67 @@
 @import url('./variables.css');
 
-.navbar{
+.navbar {
     width: 100%;
     height: 100px;
-    padding:30px;
+    padding: 30px;
+    font-family: 'K2D';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    background: var(--background-color); /* Fondo oscuro con transparencia */
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    z-index: 1050;  /* Asegura que esté por encima del contenido */
 }
 
-.nav-link{
-    color:var(--text-clear-color);
-}
-/* .navbar-nav .nav-link:visited, */
-.navbar-nav .nav-link:focus{
-  color: white !important; /* Mantén el color original después del clic */
-}
-.nav-link:hover{
-    color:var(--text-orange-color);
+/* Estilos para los enlaces */
+.nav-link {
+    color: var(--text-clear-color);
+    transition: color 0.3s ease-in-out;
 }
 
+.navbar-nav .nav-link:focus {
+    color: var(--text-clear-color) !important; /* Mantiene el color original después del clic */
+}
+
+.nav-link:hover {
+    color: var(--text-orange-color);
+}
+
+/* Estilos del botón del menú hamburguesa */
 .navbar-toggler {
-    border: 2px solid var(--text-orange-color) !important; /* Contorno blanco */
+    border: 2px solid var(--text-orange-color) !important;
     padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
 }
+
+
 
 .navbar-toggler .bi {
-    font-size: 1.5rem; /* Tamaño del icono */
-    color: var(--text-orange-color); /* Cambia el color del icono */
+    font-size: 1.5rem;
+    color: var(--text-orange-color);
 }
 
-
+/* Estilos del menú desplegable en móviles */
 @media (max-width: 991px) {
-    .navbar-nav {
-      text-align: center;
+    .navbar-collapse {
+        position: absolute;
+        top: 100px; /* Ajustado para evitar solapamiento */
+        left: 0;
+        width: 100%;
+        background: var(--background-color);
+        border-radius: 0 0 10px 10px;
+        padding: 15px;
+        
+        transition: all 0.3s ease-in-out;
     }
-  }
-  
+
+    .navbar-nav {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Espaciado entre elementos */
+    }
+}

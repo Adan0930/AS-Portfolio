@@ -1,0 +1,96 @@
+@import url(../styles/variables.css);
+
+footer {
+    font-family: 'K2D', sans-serif;
+    font-size: 18px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Altura fija */
+    background-color: var(--background-color);
+    border-top: solid 1px var(--text-orange-color);
+    color:var(--text-clear-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en dispositivos pequeños */
+    text-align: center;
+}
+
+/* Logo y Nombre */
+.logo-nombre {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    gap: 20px;
+}
+
+.logo {
+    max-width: 27px;
+}
+
+.nombre {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 100;
+    letter-spacing:3px;
+}
+
+/* Iconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 30px;
+}
+
+.icono {
+    color: var(--text-clear-color);
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.icono:hover {
+    color: var(--text-orange-color); /* Color de acento */
+}
+
+/* Derechos de autor */
+.derechos p {
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        height: auto; /* Permite que el footer se expanda si es necesario */
+        padding: 10px 0;
+        position: relative; /* Evita que el footer tape contenido en pantallas pequeñas */
+    }
+    
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-nombre {
+        justify-content: center;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+
+    .derechos {
+        text-align: center;
+    }
+}

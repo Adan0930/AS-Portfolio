@@ -1,0 +1,83 @@
+@import url('/styles/variables.css');
+
+.social-list {
+    font-family: 'K2D';
+    font-weight: 200;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Pegado a la izquierda */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.social-list .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    background: transparent !important;
+    border: none;
+    padding: 5px 0;
+}
+
+.social-list .bi {
+    font-size: 24px;
+    color: white !important;
+}
+
+.social-list a {
+    font-size: 25px;
+    color: white !important;
+    text-decoration: none; /* Elimina la línea */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-list a:hover {
+    color: var(--text-orange-color) !important; 
+}
+
+.social-list a:hover .bi {
+    color: var(--text-orange-color) !important; /* Cambia el icono a naranja */
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1400px) {
+    .social-list {
+        top: 200px;
+        bottom: 80px; /* Suficiente espacio para no tocar el footer */
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column; /* Mantiene la lista en vertical */
+    }
+}
+
+@media (max-width: 500px) {
+    .social-list {
+        top: 200px;
+        bottom: 80px; /* Suficiente espacio para no tocar el footer */
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column; /* Mantiene la lista en vertical */
+    }
+    .social-list .bi {
+        font-size: 18px;
+        color: var(--text-clear-color) !important;
+    }
+    
+    .social-list a {
+        font-size: 18px;
+        color: var(--text-clear-color) !important;
+        text-decoration: none; /* Elimina la línea */
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+}
+
+
+
