@@ -47,11 +47,37 @@
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1400px) {
     .social-list {
-        position: fixed;
-        top: 900px;
+        top: 200px;
         bottom: 80px; /* Suficiente espacio para no tocar el footer */
         left: 50%;
         transform: translateX(-50%);
         flex-direction: column; /* Mantiene la lista en vertical */
     }
 }
+
+@media (max-width: 500px) {
+    .social-list {
+        top: 200px;
+        bottom: 80px; /* Suficiente espacio para no tocar el footer */
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column; /* Mantiene la lista en vertical */
+    }
+    .social-list .bi {
+        font-size: 18px;
+        color: var(--text-clear-color) !important;
+    }
+    
+    .social-list a {
+        font-size: 18px;
+        color: var(--text-clear-color) !important;
+        text-decoration: none; /* Elimina la línea */
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+}
+
+
+
