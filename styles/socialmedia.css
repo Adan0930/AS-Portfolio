@@ -8,6 +8,8 @@
     top: 50%;
     left: 50px; /* Pegado a la izquierda */
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
 }
 
 .social-list .list-group-item {
@@ -35,10 +37,21 @@
 }
 
 .social-list a:hover {
-     color: var(--text-orange-color)!important; 
+    color: var(--text-orange-color) !important; 
 }
+
 .social-list a:hover .bi {
     color: var(--text-orange-color) !important; /* Cambia el icono a naranja */
 }
 
-
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1400px) {
+    .social-list {
+        position: fixed;
+        top: 900px;
+        bottom: 80px; /* Suficiente espacio para no tocar el footer */
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column; /* Mantiene la lista en vertical */
+    }
+}

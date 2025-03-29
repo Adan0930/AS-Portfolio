@@ -1,79 +1,119 @@
 @import url(../styles/variables.css);
 
-.container {
-  position: absolute;
-  top: 50%; /* Centrado vertical */
-  right: 0; /* Alineado a la derecha */
-  transform: translateY(-50%); /* Ajuste para centrarlo completamente */
-  margin-right: 20px; /* Ajuste para moverlo hacia la derecha */
+.container-custom {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Centra el formulario */
+  margin-right: 250px;
+  font-family: 'K2D';
+
+}
+
+.form-container {
   width: 100%;
-  max-width: 400px; /* Limita el ancho máximo del formulario */
+  max-width: 600px;
+  border-radius: 15px;
+  padding: 30px;
 }
 
-.container input {
-  background: rgba(255, 255, 255, 0.2); /* Fondo transparente con opacidad */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--text-clear-color) !important; /* Color del texto */
+.form-control {
+  background-color: transparent;
+  border: 1px solid var(--text-orange-color);
+  border-radius: 12px;
+  color: var(--text-clear-color); /* Texto blanco */
+  padding-left: 40px; /* Espacio para los íconos */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: var(--text-clear-color);
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.form-control:focus {
+  border-color: var(--text-orange-color); /* El borde se mantiene naranja */
+  outline: none; /* Sin borde blanco al hacer clic */
+  background-color: transparent; /* El fondo no cambia al escribir */
+  color:var(--text-clear-color); /* Texto blanco cuando el input está enfocado */
+}
+
+.form-control:focus::placeholder {
+  color:var(--text-clear-color); /* Placeholder blanco cuando está enfocado */
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--text-clear-color); /* Placeholder blanco para Webkit */
+}
+
+.form-control:-moz-placeholder {
+  color: var(--text-clear-color); /* Placeholder blanco para Firefox */
+}
+
+.form-control::-moz-placeholder {
+  color: var(--text-clear-color); /* Placeholder blanco para Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+  color:var(--text-clear-color); /* Placeholder blanco para IE */
+}
+
+.btn{
+  background-color:var(--text-orange-color) !important; 
+  border: none;
+  color: var(--text-clear-color);
   padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-form i {
+  margin-right: 10px; /* Espacio entre icono y texto */
+}
+
+button:hover {
+  background-color: transparent !important;
+  border: 1px solid var(--text-orange-color) !important; /* Borde naranja en hover */
+  color:var(--text-orange-color) !important;
+}
+
+button:hover i {
+  color:var(--text-orange-color); /* Icono naranja al pasar el mouse */
+}
+
+button:focus {
   outline: none;
-  border-radius: 50px;
-  transition: background 0.3s ease; /* Transición suave */
-  caret-color: var(--text-clear-color);
 }
 
-.container input::placeholder {
-  color: var(--text-clear-color);
+.text-white {
+  color: var(--text-clear-color) !important;
 }
 
-.container input:focus {
-  background: rgba(255, 255, 255, 0.3); /* Fondo ligeramente más opaco cuando se enfoca */
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
+/* Responsividad */
 
-.container input:focus::placeholder {
-  color: var(--text-clear-color); /* Mantener el color blanco del placeholder cuando se hace foco */
-}
+  
+@media (max-width: 1024px) {
+  .container-custom {
+    margin-right: 80px;
+    height: 50vh;
+  }
 
-.container .bi {
-  font-size: 1.2rem;
-  color: var(--text-clear-color); /* Color del icono */
-}
+  .form-container {
+    padding: 20px;
+    max-width: 90%;
+  }
 
-.container textarea {
-  background: rgba(255, 255, 255, 0.2); /* Fondo transparente con opacidad */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--text-clear-color) !important; /* Color del texto */
-  padding: 10px;
-  outline: none;
-  border-radius: 30px;
-  transition: background 0.3s ease; /* Transición suave */
-  caret-color: var(--text-clear-color);
-}
+  .form-control {
+    font-size: 14px;
+  }
 
-.container textarea::placeholder {
-  color: var(--text-clear-color);
-}
-
-.container textarea:focus {
-  background: rgba(255, 255, 255, 0.3); /* Fondo ligeramente más opaco cuando se enfoca */
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.container textarea:focus::placeholder {
-  color: var(--text-clear-color); /* Mantener el color blanco del placeholder cuando se hace foco */
-}
-
-.container button {
-  border-radius: 30px;
-  color: var(--text-clear-color);
-  background: var(--text-orange-color);
-}
-
-.container button:hover {
-  border-color: var(--text-clear-color); /* Borde naranja al pasar el cursor */
-  color: orange; /* Texto y icono naranja al pasar el cursor */
-}
-
-.container button:hover i {
-  color: orange; /* El icono también cambia de color a naranja */
+  button {
+    font-size: 14px;
+  }
 }
