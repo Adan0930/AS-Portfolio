@@ -13,3 +13,34 @@
     letter-spacing: 3px;
     color:var(--text-orange-color);
 }
+
+
+@media(max-width:1400px){
+    .div-motto{
+        width: 400px;
+    }
+    .motto{
+        font-size: 16px;
+    }
+}
+@media(max-width:1024px){
+    .div-motto{
+        width: 300px;
+    }
+    .motto{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:430px){
+    .div-motto{
+        width: 360px;
+        margin-top: 10px;
+    }
+    .motto{
+        font-size: 15px;
+    }
+    .bi{
+        font-size: 10px;
+    }
+}
