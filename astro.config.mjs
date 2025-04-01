@@ -2,10 +2,14 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://adan0930.github.io/AS-Portfolio/',  // Cambia por tu URL de GitHub Pages
-  base:'/AS-Portfolio/'
-,  output: 'static', // Establece la salida como estática
+  output: 'static', // Establece la salida como estática
+  base:'/AS-Portfolio/',  
   build: {
     outDir: './docs',  // La carpeta donde se generarán los archivos estáticos
+    format:'directory',
   },
 });
  
+
+
+
