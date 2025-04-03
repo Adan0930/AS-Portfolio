@@ -1,0 +1,42 @@
+name: As-Portfolio Deploy
+on:
+  push:
+    branches:
+    - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu
+
+    steps:
+      - name: clone repository
+        uses: actions/checkout@v4
+
+      - name: configure NodeJs 
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      
+      - name: install dependecies
+        run: npm install
+
+      - name: build proyect
+        run: npm run build
+
+      - name: configure github pages
+        uses: actions/configure-pages@v3
+      
+      - name: upload fieles to github pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist
+
+      - name: deploy github pages
+        uses: actions/deploy-pages@v2
+
