@@ -2,7 +2,7 @@ name: As-Portfolio Deploy
 on:
   push:
     branches:
-    - githubPages
+    - master
 
 permissions:
   contents: read
