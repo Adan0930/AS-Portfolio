@@ -2,7 +2,7 @@ name: As-Portfolio Deploy
 on:
   push:
     branches:
-    - master
+    - deploy
 
 permissions:
   contents: read
@@ -33,9 +33,9 @@ jobs:
         uses: actions/configure-pages@v3
       
       - name: upload fieles to github pages
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
       - name: deploy github pages
         uses: actions/deploy-pages@v2
