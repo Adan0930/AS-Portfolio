@@ -1,6 +1,6 @@
 .env
 # build output
-
+dist/
 
 # generated types
 .astro/
