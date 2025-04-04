@@ -1,7 +1,8 @@
 ---
 import '../../styles/photo.css'
+const base = import.meta.env.BASE_URL;
 ---
 
 <div class="div-img col-6 col-sm-4 ms-auto">
-    <img src="../../public/photo.png" alt="" width="350px">
+    <img src=  {`${base}photo.png`} alt="" width="350px">
 </div>
