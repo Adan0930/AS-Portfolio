@@ -1,9 +1,10 @@
 ---
 import '../../styles/card.css'
+const base= import.meta.env.BASE_URL;
 ---
 <div class="card p-3 m-5" style="width: 18rem;">
 	<div class="d-flex justify-content-center aling-items-center p-3">
-		<img src="../../public/Logo-procmak.svg" class="logo-card" alt="Logo-Procmak">
+		<img src= {`${base}Logo-procmak.svg`}  class="logo-card" alt="Logo-Procmak">
 	</div>
 	<div class="card-body p-3">
 		<h5 class="card-title">ProcMak</h5>

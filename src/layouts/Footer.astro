@@ -1,11 +1,12 @@
 ---
 import '../../styles/footer.css'
+const base = import.meta.env.BASE_URL; // Definir la base URL
 ---
 <footer>
   <div class="container">
     <!-- Logo y nombre -->
     <div class="logo-nombre">
-      <a href="/"><img src="../../public/LOGO-PNG-SF.png" alt="Logo" class="logo"></a>
+      <a href="/AS-Portfolio/"><img src={`${base}LOGO-PNG-SF.png`} alt="Logo" class="logo"></a>
       <h5 class="nombre">Adán Sánchez Hernández</h5>
     </div>
     <!-- Iconos de redes sociales -->
